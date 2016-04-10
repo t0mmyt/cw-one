@@ -17,7 +17,7 @@ case class BnzInstruction(label: String, opcode: String, register: Int, target: 
         m.execute(goto)
       else
         throw new IllegalArgumentException(s"Error at ${label}: ${target} not found!")
-      // This is not very functional but I can't find another way without modifying the main execution loop
+      // This is not very functional but works as planned.  Plus Keith said it was worth bonus marks.
       break
     }
 
